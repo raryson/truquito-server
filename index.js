@@ -1,8 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require('cors')
 const app = express();
 const mongoose = require("mongoose");
 app.use(bodyParser.json());
+app.use(cors())
 mongoose.connect(
   "mongodb+srv://truquito:12345@cluster0.xrofo.mongodb.net/truquito?retryWrites=true&w=majority",
   {
